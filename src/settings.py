@@ -13,37 +13,40 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "PRMI"
+PROJECT_NAME_FULL: str = "PRMI: A Dataset of Minirhizotron Images for Diverse Plant Root Study"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.CC0_1_0()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Agricultural()]
+CATEGORY: Category = Category.Agriculture()
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
-RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
+RELEASE_DATE: Optional[str] = "2022-02-04"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://gatorsense.github.io/PRMI/"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 6705165
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/prmi"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
+    "PRMI_official.zip": "https://zenodo.org/record/5974905/files/PRMI_official.zip?download=1",
+    "README": "https://zenodo.org/record/5974905/files/README?download=1",
+}
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,22 +54,31 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/2201.08002"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Zenodo":"https://zenodo.org/record/5974905#.YlAJtn9Bzmg"}
 
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+CITATION_URL: Optional[str] = "https://gatorsense.github.io/PRMI/"
+AUTHORS: Optional[List[str]] = ["Weihuang Xu", "Guohao Yu", "Yiming Cui", "Romain Gloaguen", "Alina Zare", "Jason Bonnette", "Joel Reyes-Cabrera", "Ashish Rajurkar", "Diane Rowland", "Roser Matamala", "Julie D. Jastrow", "Thomas E. Juenger", "Felix B. Fritschi"]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "US-FR joint research group"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://gatorsense.github.io/PRMI/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"species":[
+        "cotton",
+        "papaya",
+        "peanut",
+        "sesame",
+        "sunflower",
+        "switchgrass",        
+    ],
+    "__POSTTEXT__": "Additionally, every image preserves information about its ***DPI***" 
+    }
 TAGS: Optional[List[str]] = None
 
 
-SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = None
+SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ['train']
 
 ##################################
 ###### ? Checks. Do not edit #####
