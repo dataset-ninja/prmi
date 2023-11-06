@@ -60,6 +60,7 @@ REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Zenodo":"https:/
 
 CITATION_URL: Optional[str] = "https://gatorsense.github.io/PRMI/"
 AUTHORS: Optional[List[str]] = ["Weihuang Xu", "Guohao Yu", "Yiming Cui", "Romain Gloaguen", "Alina Zare", "Jason Bonnette", "Joel Reyes-Cabrera", "Ashish Rajurkar", "Diane Rowland", "Roser Matamala", "Julie D. Jastrow", "Thomas E. Juenger", "Felix B. Fritschi"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["weihuang.xu@ufl.edu"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "US-FR joint research group"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://gatorsense.github.io/PRMI/"
@@ -122,6 +123,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
