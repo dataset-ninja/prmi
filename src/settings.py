@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "PRMI"
-PROJECT_NAME_FULL: str = "PRMI: A Dataset of Minirhizotron Images for Diverse Plant Root Study"
+PROJECT_NAME_FULL: str = "PRMI: Plant Root Minirhizotron Imagery"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
