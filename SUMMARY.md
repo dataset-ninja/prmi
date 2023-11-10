@@ -1,4 +1,4 @@
-**PRMI: Plant Root Minirhizotron Imagery** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the agricultural industry. 
+**PRMI: Plant Root Minirhizotron Imagery** is a dataset for instance segmentation, semantic segmentation, object detection, and weakly supervised learning tasks. It is used in the agricultural industry. 
 
 The dataset consists of 72567 images with 114676 labeled objects belonging to 1 single class (*root*).
 
