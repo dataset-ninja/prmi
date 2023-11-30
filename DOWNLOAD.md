@@ -1,6 +1,6 @@
 Dataset **PRMI** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/q/T/Pj/3Iqt6nlY7haCwvEIYBlh2I4Gj5tNjNqYRJlAUAonWHj8yfBQW02NT59gpn4xE9pkQNXYeEInSmSkM9qVX7KV8wmdhXZulbibYC17ClAYXSTCHlngq6TXEIUM0vOQ.tar)
+ [Download](https://www.dropbox.com/scl/fi/cx3p5t3cf1vh0l6cpkt9i/prmi-DatasetNinja.tar?rlkey=37t5d90wxnot176hfsat0s2ef&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
